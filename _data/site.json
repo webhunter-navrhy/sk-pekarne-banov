@@ -1,0 +1,30 @@
+{
+  "slug": "sk-pekarne-banov",
+  "nazev": "Pekáreň Bánov",
+  "url": "https://webhunter-navrhy.github.io/sk-pekarne-banov/",
+  "base": "/sk-pekarne-banov/",
+  "lang": "sk",
+  "popis": "Remeselná pekáreň Jozef Oremus v Bánove: chlieb, pečivo a mrazené výrobky od roku 1991. Dve podnikové predajne, dodávky pre obchody a prevádzky.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "croissant.jpg",
+  "logo": "logo.png",
+  "theme_color": "#d02018",
+  "typ": "Bakery",
+  "ico": "14424240",
+  "kontakt": {
+    "email": "oremus@pekarne.sk",
+    "telefon": "035/6506 140",
+    "adresa": {"ulice": "Štúrova 42", "psc": "941 01", "mesto": "Bánov", "zeme": "SK"}
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "",
+  "formular": {"endpoint": "", "demo": true, "predmet": "Dopyt z webu pekarne.sk"},
+  "nav": [
+    {"text": "Výrobky", "href": "#vyrobky"},
+    {"text": "O nás", "href": "#o-nas"},
+    {"text": "Predajne", "href": "#predajne"},
+    {"text": "Dopyt", "href": "#kontakt"}
+  ]
+}

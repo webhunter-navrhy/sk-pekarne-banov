@@ -1,0 +1,104 @@
+{% extends "_base.html" %}
+{% set titulek = 'Pekáreň Bánov – chlieb, pečivo a mrazené výrobky od roku 1991' %}
+{% set cesta = '' %}
+{% block head %}<link rel="stylesheet" href="{{ asset('fonts/fonts.css') }}">{% endblock %}
+{% block obsah %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="stitok">Jozef Oremus · Bánov</p>
+      <h1>Remeselná pekáreň z Bánova</h1>
+      <p class="uvod">Chlieb, pečivo a mrazené výrobky pečieme v Bánove od roku 1991. Dodávame ich do obchodov a prevádzok v okolí a predávame vo vlastných predajniach v Bánove a vo Vrábľoch.</p>
+      <p class="tlacitka"><a class="tlacitko" href="#vyrobky">Naše výrobky</a> <a class="tlacitko druhe" href="#kontakt">Dopyt pre odberateľov</a></p>
+    </div>
+    <div class="hero-foto">{{ img('predajna.jpg', 'Podniková predajňa Pekárne Bánov s nápisom Chlieb a pečivo', sizes='(min-width: 60rem) 36rem, 100vw') }}</div>
+  </div>
+</section>
+
+<section class="sekce" id="vyrobky">
+  <div class="wrap">
+    <h2>Naše výrobky</h2>
+    <p class="perex">Od pôvodných troch druhov sa sortiment rozrástol na 150 výrobkov. Tu je výber z chleba, bežného a jemného pečiva.</p>
+    <div class="kategorie">
+      {% for k in data.vyrobky.kategorie %}
+      <article class="kat">
+        <h3>{{ k.nazev }}</h3>
+        <ul role="list">{% for v in k.polozky[:5] %}<li>{{ v }}</li>{% endfor %}</ul>
+        {% if k.polozky|length > 5 %}<details><summary>Ďalších {{ k.polozky|length - 5 }} výrobkov</summary><ul role="list">{% for v in k.polozky[5:] %}<li>{{ v }}</li>{% endfor %}</ul></details>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sekce mrazene" id="mrazene">
+  <div class="wrap">
+    <h2>Hotové za 20 minút</h2>
+    <p class="perex">Hlbokozmrazené výrobky, ktoré stačí upiecť. Taštičky, pagáčiky aj mini croissanty z hlbokozmrazenej ponuky.</p>
+    <div class="mraz-grid">
+      <figure>{{ img('tasticky-slivkove.jpg', 'Taštičky so slivkovou náplňou, hlbokozmrazené', sizes='(min-width: 60rem) 22rem, 100vw') }}<figcaption>Taštičky slivkové</figcaption></figure>
+      <figure>{{ img('tasticky-cucoriedkove.jpg', 'Taštičky s čučoriedkovou náplňou, hlbokozmrazené', sizes='(min-width: 60rem) 22rem, 100vw') }}<figcaption>Taštičky čučoriedkové</figcaption></figure>
+      <figure>{{ img('pagace.jpg', 'Oškvarkové pagáčiky, hlbokozmrazené', sizes='(min-width: 60rem) 22rem, 100vw') }}<figcaption>Oškvarkové pagáčiky</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sekce" id="o-nas">
+  <div class="wrap dva">
+    <div>
+      <h2>Tradícia v modernej výrobe</h2>
+      <p>Firmu založil v roku 1991 Jozef Oremus spolu s bratom Jurajom. V roku 2000 sa bratia rozdelili a každý išiel vlastnou cestou. Bánovská pekáreň si zachovala dobré meno aj odberateľov a postupne rozšírila výrobu o nové stroje a technológie.</p>
+      <p>Dnes vyrábame všetky druhy pekárskych výrobkov, od chleba cez biele a sladké pečivo až po predpečené a mrazené produkty. Aj pri moderných technológiách držíme tradičný spôsob výroby s vysokým podielom ručnej práce.</p>
+      <p>Za výsledkami stojí pracovný kolektív a dlhodobé vzťahy s odberateľmi, s ktorými spolupracujeme od začiatkov.</p>
+    </div>
+    <blockquote class="vizia"><p>Naším poslaním je Vaša spokojnosť. Každodenne dodávame čerstvé a kvalitné pekárenské výrobky vždy načas.</p></blockquote>
+  </div>
+</section>
+
+<section class="sekce predajne" id="predajne">
+  <div class="wrap">
+    <h2>Predajne</h2>
+    <div class="predajne-grid">
+      {% for p in data.vyrobky.predajne %}
+      <article class="predajna">
+        <h3>{{ p.nazev }}</h3>
+        <p>{{ p.adresa }}</p>
+        <p><a href="tel:{{ p.tel_href }}">{{ p.tel }}</a></p>
+        <dl class="hodiny">
+          <div><dt>Pondelok – piatok</dt><dd>{{ p.po_pi }}</dd></div>
+          <div><dt>Sobota</dt><dd>06:00 – 12:00</dd></div>
+          <div><dt>Nedeľa</dt><dd>zatvorené</dd></div>
+        </dl>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sekce kontakt" id="kontakt">
+  <div class="wrap dva">
+    <div>
+      <h2>Pre odberateľov</h2>
+      <p>Denne dodávame čerstvý chlieb a pečivo do obchodných reťazcov aj do súkromných a verejných prevádzok. Napíšte nám, čo potrebujete, a ozveme sa.</p>
+      <dl class="kontakty">
+        <div><dt>Kancelária</dt><dd><a href="tel:+421356506140">035/6506 140</a></dd></div>
+        <div><dt>Expedícia</dt><dd><a href="tel:+421356571494">035/6571 494</a></dd></div>
+        <div><dt>Obchodný manažér, Michal Oremus</dt><dd><a href="tel:+421911867888">0911 867 888</a></dd></div>
+        <div><dt>Adresa</dt><dd>Štúrova 42, 941 01 Bánov</dd></div>
+      </dl>
+    </div>
+    <div>
+      <form class="formular" method="post" data-endpoint="{{ site.formular.endpoint }}" data-demo="1">
+        <label>Meno alebo firma <input name="jmeno" autocomplete="name" required></label>
+        <label>E-mail <input name="email" type="email" autocomplete="email" required></label>
+        <label>Telefón <input name="telefon" type="tel" autocomplete="tel"></label>
+        <label>Čo potrebujete (druh výrobkov, odhad množstva, miesto dodania) <textarea name="zprava" rows="5" required></textarea></label>
+        <div class="past" aria-hidden="true"><label>Nevypĺňať <input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <input type="hidden" name="_subject" value="{{ site.formular.predmet }}">
+        <button type="submit">Odoslať dopyt</button>
+        <p class="formular-stav" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

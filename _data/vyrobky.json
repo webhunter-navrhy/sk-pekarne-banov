@@ -1,0 +1,11 @@
+{
+  "kategorie": [
+    {"nazev": "Chlieb", "polozky": ["Chlieb biely", "Chlieb čierny", "Chlieb FIT", "Chlieb horehronský", "Chlieb Tyrólsky", "Chlieb kráľovský", "Chlieb ČERT", "Chlieb NOPAL", "Chlieb ražný s rascou", "Chlieb DLHÁŇ", "Poplaňúch"]},
+    {"nazev": "Bežné pečivo", "polozky": ["Rožok mini", "Rožok veľký", "Žemľa", "Kaiserka", "Žemľa hamburgerová", "Pletenky", "Bageta", "Bielkovinové pečivo", "Rožok grahamový", "Sendvič", "Granát viaczrnný", "Kukuričniak"]},
+    {"nazev": "Jemné pečivo", "polozky": ["Vianočka", "Závin s jablkovou náplňou", "Osie hniezdo so škoricovou náplňou", "Mrežovník s čučoriedkovou náplňou", "Štrúdľa orechovo-jablková", "Taštička so slivkovou náplňou", "Koláč bánovský marhuľový", "Koláč bánovský jahodový", "Pagáč kapustový", "Uzol cesnakový"]}
+  ],
+  "predajne": [
+    {"nazev": "Predajňa Bánov", "adresa": "Štúrova 42, 941 01 Bánov", "tel": "0910 544 834", "tel_href": "+421910544834", "po_pi": "06:00 – 16:30"},
+    {"nazev": "Predajňa Vráble", "adresa": "Kpt. Nálepku 450, 952 01 Vráble", "tel": "0910 999 979", "tel_href": "+421910999979", "po_pi": "06:00 – 17:00"}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "znamka": 7,
+  "slabiny": [
+    "Sekce Naše výrobky (PC buňka 2, mobil buňky 2–3): seznamy jsou zkrácené na 5 položek s odkazem „Ďalších X výrobkov“ a matoucí poznámka zmizela, takže tahle část opravy je hotová. Kategorie Chlieb, Bežné pečivo a Jemné pečivo jsou ale pořád jen bílé karty se seznamem textu bez jediné fotky. Pekárna tak působí bez chuti a nejvíc to bije do očí hned vedle fotek v sekci Hotové za 20 minút. Oprava: nad každou kartu dát fotku dané kategorie, tedy chleba, rohlíků/žemlí a vánočky/závinu z vlastních fotek pekárny nebo z výloh prodejny. Když fotky k dispozici nejsou, použít alespoň výřez z fotky výlohy z hero, kde je chléb vidět.",
+    "Mobilní hlavička (všechny buňky, nejvíc na 360 px v buňce 6): menu je teď v jednom řádku, ale tlačítko „Dopyt“ pořád chybí a čtyři textové odkazy jsou na 360 px natlačené až k okrajům. Oprava: na ≤ 820 px nechat logo a v menu jen 2 odkazy (Výrobky, Predajne) a vpravo dát červené tlačítko „Dopyt“ s odkazem na #odberatelia. Případně použít hamburger s tlačítkem „Dopyt“ vedle něj.",
+    "Sekce Tradícia v modernej výrobe (PC buňka 4, mobil buňka 5): věta „…odberateľmi, z ktorých sú niektorí s nami viac ako 35 rokov“ je jen přesunutý údaj ze zrušeného pásu se statistikami. Pekárna je od roku 1991, takže „viac ako 35 rokov“ v roce 2026 nesedí ani matematicky. Oprava: ponechat ji jen tehdy, když je doslova na původním webu, jinak ji nahradit větou „…dlhodobé vzťahy s odberateľmi, s ktorými spolupracujeme od začiatkov“."
+  ],
+  "silne": [
+    "Hero má teď vlastní fotku prodejny se žlutým logem Oremus, takže je hned jasné, že jde o skutečnou pekárnu z Bánova, a ne o stock.",
+    "Pás se statistikami je pryč, boxy Misia/Vízia jsou sloučené do jedné citace a mobil je výrazně kratší.",
+    "Kontakty pro odběratele mají na mobilu popisek nad hodnotou a čísla se už nelámou. Formulář s nápovědou „druh výrobkov, odhad množstva, miesto dodania“ je konkrétní a prodejní.",
+    "Paleta vychází z loga (červená, žlutá, teplá krémová, čokoládová hnědá) a Young Serif s háčky (Pekáreň, Ďalších) se kreslí správně. QA je bez chyb a bez přetečení na všech šířkách."
+  ],
+  "verdikt": "Hlavní výtky z minulého kola jsou opravené: pás se statistikami, stock hero, Misia/Vízia i lámání čísel. Před odesláním je ještě potřeba fotkami oživit sortiment, doplnit tlačítko Dopyt do mobilní hlavičky a ověřit údaj „viac ako 35 rokov“.",
+  "_hash": "e19c464d0675e7ed091a3b5ecc47519535dd05ec"
+}
